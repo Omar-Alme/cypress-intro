@@ -12,7 +12,7 @@ describe("todo", () => {
 
   it("should be able to delete a todo", () => {
     cy.visit("/");
-    cy.contains("Feed the cat").parents("li").find("button").click();
+    cy.contains("Feed the ct").parents("li").find("button").click();
     cy.get("li").should("have.length", 2);
     cy.contains("Feed the cat").should("not.exist");
   });
