@@ -20,5 +20,11 @@ jobs:
         node-version: 22
         cache: 'npm'
     - run: npm ci
+
     - run: npm run build
+
+      env:
+        DATABASE_URL: mongodb://localhost:27017/cypress-dev
+
     - run: npm run test:run
+      
